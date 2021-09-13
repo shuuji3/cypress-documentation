@@ -4,6 +4,54 @@ title: Configuration
 
 ## cypress.json
 
+<code-group>
+  <code-block label=".js" active>
+
+```bash
+cypress.config.js
+
+const json = {
+    "includeShadowDom": true,
+    "experimentalSessionSupport": true,
+    "viewportWidth": 1280,
+    "viewportHeight": 1000
+}
+
+```
+
+  </code-block>
+  <code-block label=".ts">
+
+```bash
+cypress.config.ts
+
+const json = {
+    "includeShadowDom": true,
+    "experimentalSessionSupport": true,
+    "viewportWidth": 1280,
+    "viewportHeight": 1000
+}
+
+```
+
+  </code-block>
+  <code-block label=".json">
+
+```bash
+cypress.json (legacy)
+
+{
+    "includeShadowDom": true,
+    "experimentalSessionSupport": true,
+    "viewportWidth": 1280,
+    "viewportHeight": 1000
+}
+
+```
+
+  </code-block>
+</code-group>
+
 The first time you open Cypress Test Runner, it creates the `cypress.json`
 configuration file. This JSON file is used to store any configuration values you
 supply. If you

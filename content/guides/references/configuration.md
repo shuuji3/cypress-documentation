@@ -5,48 +5,43 @@ title: Configuration
 ## cypress.json
 
 <code-group>
-  <code-block label=".js" active>
+  <code-block label="cypress.config.js" active>
 
-```bash
-cypress.config.js
+```js
+const { defineConfig } = require('cypress')
 
-const json = {
-    "includeShadowDom": true,
-    "experimentalSessionSupport": true,
-    "viewportWidth": 1280,
-    "viewportHeight": 1000
-}
-
+module.exports = defineConfig({
+  includeShadowDom: true,
+  experimentalSessionSupport: true,
+  viewportWidth: 1280,
+  viewportHeight: 1000,
+})
 ```
 
   </code-block>
-  <code-block label=".ts">
+  <code-block label="cypress.config.ts">
 
-```bash
-cypress.config.ts
+```ts
+import { defineConfig } from 'cypress'
 
-const json = {
-    "includeShadowDom": true,
-    "experimentalSessionSupport": true,
-    "viewportWidth": 1280,
-    "viewportHeight": 1000
-}
-
+export default defineConfig({
+  includeShadowDom: true,
+  experimentalSessionSupport: true,
+  viewportWidth: 1280,
+  viewportHeight: 1000,
+})
 ```
 
   </code-block>
-  <code-block label=".json">
+  <code-block label="cypress.json (deprecated)">
 
-```bash
-cypress.json (legacy)
-
+```json
 {
-    "includeShadowDom": true,
-    "experimentalSessionSupport": true,
-    "viewportWidth": 1280,
-    "viewportHeight": 1000
+  "includeShadowDom": true,
+  "experimentalSessionSupport": true,
+  "viewportWidth": 1280,
+  "viewportHeight": 1000
 }
-
 ```
 
   </code-block>
